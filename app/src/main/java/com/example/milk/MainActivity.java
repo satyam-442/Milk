@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity
     DatabaseReference donorRef;
     ProgressDialog loadingBar;
 
+    EditText pavaniEmail;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -38,6 +40,8 @@ public class MainActivity extends AppCompatActivity
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         getWindow().setStatusBarColor(Color.TRANSPARENT);
         setContentView(R.layout.activity_main);
+
+        pavaniEmail = findViewById(R.id.username);
 
         username = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);

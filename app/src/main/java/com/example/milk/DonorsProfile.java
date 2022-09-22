@@ -204,7 +204,7 @@ public class DonorsProfile extends AppCompatActivity
             {
                 if (dataSnapshot.exists())
                 {
-                    String message = dataSnapshot.child("Phone").getValue().toString();
+                    String message = dataSnapshot.child("Contact").getValue().toString();
                     Uri mess = Uri.parse("sms:" + message);
                     Intent contactIntent = new Intent(Intent.ACTION_VIEW,mess);
                     contactIntent.putExtra(Intent.EXTRA_TEXT,"Dear Sir/Madam\n" +
@@ -233,7 +233,7 @@ public class DonorsProfile extends AppCompatActivity
             {
                 if(dataSnapshot.exists())
                 {
-                    String phone = dataSnapshot.child("Phone").getValue().toString();
+                    String phone = dataSnapshot.child("Contact").getValue().toString();
                     Uri call = Uri.parse("tel:" + phone);
                     Intent contactIntent = new Intent(Intent.ACTION_DIAL,call);
                     //contactIntent.setType("");
@@ -263,7 +263,7 @@ public class DonorsProfile extends AppCompatActivity
                         intent.putExtra(Intent.EXTRA_SUBJECT,"Request for the Milk.");
                         intent.putExtra(Intent.EXTRA_TEXT,"Dear Sir/Madam\n" +
                                 "\n" +
-                                "By donating the blood you will be hero someone's eye. Your small help\n" +
+                                "By donating the milk you will be hero someone's eye. Your small help\n" +
                                 "can help and save someone's life which will be very deed for you. If interested to donate\n" +
                                 "please contact the following person\n" +
                                 "\n" +
